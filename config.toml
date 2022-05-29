@@ -3,3 +3,8 @@ languageCode = 'en-us'
 title = 'The JukeBot Lab'
 theme = 'jukebot'
 canonifyURLs = true
+
+[params]
+  description = "Find the best JukeBot instance for you"
+  #images = ["899039383011885176.jpg"]
+  startPageColumns = false
