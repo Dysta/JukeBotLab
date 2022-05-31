@@ -1,4 +1,19 @@
 ---
+- group: Links
+  items:
+    - title: Support server
+      link: https://dsc.gg/jukebot-land
+      icon: fa fa-cogs
+    - title: Vote
+      link: "https://top.gg/bot/899039383011885176/vote"
+      icon: fas fa-chart-line
+    - title: Donate
+      link: https://www.patreon.com/jukebot
+      icon: fas fa-hand-holding-usd
+    - title: Source code
+      link: https://github.com/Dysta/JukeBot
+      icon: fab fa-git-alt
+
 - group: JukeBot Instances
   items:
     - title: JukeBot Red
