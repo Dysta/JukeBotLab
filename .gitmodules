@@ -1,6 +1,0 @@
-[submodule "themes/startpage"]
-	path = themes/startpage
-	url = https://github.com/spech66/bootstrap-bp-hugo-startpage.git
-[submodule "themes/jukebot"]
-	path = themes/jukebot
-	url = https://github.com/dysta/bootstrap-bp-hugo-startpage.git
