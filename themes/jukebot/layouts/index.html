@@ -1,0 +1,62 @@
+{{ define "main" }}
+
+<h1 class="welcomeText">{{ .Site.Params.welcomeText }}</h1>
+
+{{ if .Site.Params.searchEngines }}
+    {{ range .Site.Params.searchEngines }}
+        {{ if .activated }}
+            <form id="search-form-{{ .name }}" class="mb-3" action="{{ .url }}" method="get">
+                <input id="search-bar-{{ .name }}" class="form-control" type="text" autofocus type="text" placeholder="Search {{ .name }}" name="{{ cond (isset . "searchkey") .searchkey "q" }}" alt="Search {{ .name }}" onkeydown="if(event.keyCode === 13) { this.form.submit(); return false; }">
+            </form>
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ if .Site.Params.startPageColumns }}
+    <div id="groupList" class="card-deck mt-3">
+        {{ range .Site.Data.links }}
+            <div id="groupListEntry" class="card">
+                <div class="card-body">
+                    <h5 class="card-title groupTitle">{{ .group }}</h5>
+                    <ul class="list-group list-group-flush groupListList">
+                        {{ range .items }}
+                            {{ if not .slots }}
+                                <li class="list-group-item groupListListItem"><i class="{{ .icon }}"></i> &bull; <a href="{{ .link }}" target="_self" class="groupLink"><span class="groupText">{{ .title | safeHTML }}</a></li>
+                            {{ else }}
+                                {{ if eq .slots .max_slots}}
+                                    <li class="list-group-item groupListListItem cursorDisabled"><img src="/images/{{ .id }}.png" width="34px" height="30px">&nbsp;<span class="groupText">{{ .title | safeHTML }} &bull; Available slots: {{ sub .max_slots .slots }}</span></li>
+                                {{ else }}
+                                    <li class="list-group-item groupListListItem"><a href="https://discord.com/api/oauth2/authorize?client_id={{ .id }}&permissions=277028916545&scope=bot%20applications.commands" target="_self" class="groupLink"><img src="/images/{{ .id }}.png"  width="34px" height="30px">&nbsp;<span class="groupText">{{ .title | safeHTML }} &bull; Available slots: {{ sub .max_slots .slots }}</span></a></li>
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        {{ end }}
+    </div>
+{{ else }}
+    <div id="iconList" class="card-columns mt-3">
+        {{ range .Site.Data.links }}
+            {{ range .items }}
+                <div id="iconListEntry" class="card">
+                    {{ if eq .slots .max_slots}}
+                    <div class="card-body cursorDisabled">
+                        <p class="card-text"><img src="/images/{{ .id }}.png" width="160px" height="139px"></p>
+                        <p class="card-text">{{ .title | safeHTML }}</p>
+                        <p class="card-text">Available slots: {{ sub .max_slots .slots }}</p>
+                    </div>
+                    {{ else }}
+                    <div class="card-body cursorPointer" onclick="location.href = 'https:\/\/discord.com\/api\/oauth2\/authorize?client_id={{ .id }}\u0026permissions=277028916545\u0026scope=bot%20applications.commands'">
+                        <p class="card-text"><a href="https://discord.com/api/oauth2/authorize?client_id={{ .id }}&permissions=277028916545&scope=bot%20applications.commands" target="_self" class="iconLink"><img src="/images/{{ .id }}.png" width="160px" height="139px"></a></p>
+                        <p class="card-text"><a href="https://discord.com/api/oauth2/authorize?client_id={{ .id }}&permissions=277028916545&scope=bot%20applications.commands" target="_self" class="iconLink">{{ .title | safeHTML }}</a></p>
+                        <p class="card-text">Available slots: {{ sub .max_slots .slots }}</p>
+                    </div>
+                    {{ end }}
+                </div>
+            {{ end }}
+        {{ end }}
+    </div>
+{{ end }}
+
+{{ end }}
