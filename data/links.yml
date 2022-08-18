@@ -18,9 +18,9 @@
   items:
     - title: JukeBot Red
       id: 899039383011885176
-      slots: 100
+      slots: 99
       max_slots: 100
     - title: JukeBot Yellow
       id: 967377726942105621
-      slots: 20
+      slots: 22
       max_slots: 100
