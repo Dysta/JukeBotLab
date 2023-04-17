@@ -59,4 +59,33 @@
     </div>
 {{ end }}
 
+<div id="groupList" class="card-deck mt-3">
+    <div id="groupListEntry" class="card">
+        <div class="card-body">
+            <h5 class="card-title groupTitle"><b>Commands list</b> <i class="fas fa-level-down-alt"></i></h5>
+        </div>
+    </div>
+</div>
+
+{{ range $index, $value := .Site.Data.cmds }}
+<div id="groupList" class="card-deck mt-3">
+    <div id="groupListEntry" class="card">
+        <div class="card-header cursorPointer" id="heading" data-toggle="collapse" data-target="#collapse{{ $index }}" aria-controls="collapse{{ $index }}">
+            <h5 class="mb-0">
+                <i class="{{ .icon }}"></i> &bull; <b>{{ .title }}</b>
+            </h5>
+        </div>
+
+        <div id="collapse{{ $index }}" class="collapse" aria-labelledby="heading">
+            <div class="card-body">
+                <ul class="list-group list-group-flush groupListList">
+                    <li class="list-group-item groupListListItem"><i class="fas fa-bolt"></i> <i class="fas fa-caret-right"></i> {{ .usage }}</li>
+                    <li class="list-group-item groupListListItem"><i class="far fa-question-circle"></i> <i class="fas fa-caret-right"></i> {{ .desc }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+
 {{ end }}

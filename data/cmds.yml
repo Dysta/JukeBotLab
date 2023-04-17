@@ -1,0 +1,101 @@
+---
+
+- title: avatar
+  icon: fas fa-address-book
+  usage: /avatar user
+  desc: Display a user avatar in a embed message. If no user, it will show the command invoker avatar.
+
+- title: current
+  icon: far fa-clock
+  usage: /current 
+  desc: Display the current music and the progression from the bot.
+
+- title: find
+  icon: fas fa-assistive-listening-systems
+  usage: /find url
+  desc: Shazam the song at the given url. It take the 20 first seconds of the media then Shazam it.
+
+- title: grab
+  icon: fas fa-file-export
+  usage: /grab 
+  desc: Send the current song in your DM to save it.
+
+- title: info
+  icon: fas fa-info-circle
+  usage: /info 
+  desc: Get information about the bot like the ping and the uptime.
+
+- title: join
+  icon: fas fa-sign-in-alt
+  usage: /join 
+  desc: Connect the bot to your current voice channel
+
+- title: leave
+  icon: fas fa-sign-out-alt
+  usage: /leave 
+  desc: Disconnect the bot from the current connected voice channel.
+
+- title: links
+  icon: fas fa-external-link-alt
+  usage: /links 
+  desc: Send all links to support the bot
+
+- title: loop
+  icon: fas fa-redo
+  usage: /loop mode
+  desc: Allow user to enable or disable the looping of a song or queue.
+
+- title: pause
+  icon: fas fa-pause-circle
+  usage: /pause 
+  desc: Pause the current music from the bot without stop it.
+
+- title: play
+  icon: fas fa-music
+  usage: /play query top
+  desc: Play a music from the provided URL or a query
+
+- title: queue
+  icon: fas fa-list
+  usage: /queue show add remove clear shuffle
+  desc: Manipulate the queue of the player.
+
+- title: radio
+  icon: fas fa-broadcast-tower
+  usage: /radio lofi jazz rocknroll chiptune synthwave lounge minecraft rap poprock workout slowed
+  desc: Launch a random radio
+
+- title: reset
+  icon: fas fa-sync
+  usage: /reset 
+  desc: Reset the current guild player when something is wrong.
+
+- title: resume
+  icon: fas fa-play-circle
+  usage: /resume 
+  desc: Resume the current music
+
+- title: search
+  icon: fas fa-search
+  usage: /search query source
+  desc: Search for your query and display the 10 first results
+
+- title: share
+  icon: fas fa-share-alt
+  usage: /share url
+  desc: Share the song at the given url. It return all the available streaming platform for the track.
+
+- title: skip
+  icon: fas fa-arrow-alt-circle-right
+  usage: /skip 
+  desc: Skip the current song.
+
+- title: stop
+  icon: fas fa-stop-circle
+  usage: /stop 
+  desc: Stop the current music from the bot without disconnect him.
+
+- title: watch
+  icon: fab fa-youtube
+  usage: /watch 
+  desc: Launch a Youtube Together session in the current voice channel the invoker is.
