@@ -1,24 +1,19 @@
 ---
 
-- title: avatar
-  icon: fas fa-address-book
-  usage: /avatar user
-  desc: Display a user avatar in a embed message. If no user, it will show the command invoker avatar.
-
 - title: current
   icon: far fa-clock
   usage: /current 
-  desc: Display the current music and the progression from the bot.
+  desc: Shows the music currently playing and its progress
 
 - title: find
   icon: fas fa-assistive-listening-systems
   usage: /find url
-  desc: Shazam the song at the given url. It take the 20 first seconds of the media then Shazam it.
+  desc: Parses the media at the given URL and returns the music used in it
 
 - title: grab
   icon: fas fa-file-export
   usage: /grab 
-  desc: Send the current song in your DM to save it.
+  desc: Similar to the current command but sends the message in DM
 
 - title: info
   icon: fas fa-info-circle
@@ -28,7 +23,7 @@
 - title: join
   icon: fas fa-sign-in-alt
   usage: /join 
-  desc: Connect the bot to your current voice channel
+  desc: Connect the bot to the voice channel you are in
 
 - title: leave
   icon: fas fa-sign-out-alt
@@ -48,17 +43,17 @@
 - title: pause
   icon: fas fa-pause-circle
   usage: /pause 
-  desc: Pause the current music from the bot without stop it.
+  desc: Pause the current music without skipping it
 
 - title: play
   icon: fas fa-music
   usage: /play query top
-  desc: Play a music from the provided URL or a query
+  desc: Play music from URL or search
 
 - title: queue
   icon: fas fa-list
   usage: /queue show add remove clear shuffle
-  desc: Manipulate the queue of the player.
+  desc: Base command to perform manipulations on the bot queue
 
 - title: radio
   icon: fas fa-broadcast-tower
@@ -68,34 +63,34 @@
 - title: reset
   icon: fas fa-sync
   usage: /reset 
-  desc: Reset the current guild player when something is wrong.
+  desc: Disconnects the bot and resets its internal state if something isn't working.
 
 - title: resume
   icon: fas fa-play-circle
   usage: /resume 
-  desc: Resume the current music
+  desc: Resumes the current or the next music
 
 - title: search
   icon: fas fa-search
   usage: /search query source
-  desc: Search for your query and display the 10 first results
+  desc: Allows you to search the first 10 results for the desired music.
 
 - title: share
   icon: fas fa-share-alt
   usage: /share url
-  desc: Share the song at the given url. It return all the available streaming platform for the track.
+  desc: Returns all streaming platforms available for the given media
 
 - title: skip
   icon: fas fa-arrow-alt-circle-right
   usage: /skip 
-  desc: Skip the current song.
+  desc: Skips to the next music in the queue. Stop the music if the queue is empty
 
 - title: stop
   icon: fas fa-stop-circle
   usage: /stop 
-  desc: Stop the current music from the bot without disconnect him.
+  desc: Stop and skip current music without disconnecting bot from voice channel
 
 - title: watch
   icon: fab fa-youtube
   usage: /watch 
-  desc: Launch a Youtube Together session in the current voice channel the invoker is.
+  desc: Launch a Youtube Together session in the voice channel where you are currently.
