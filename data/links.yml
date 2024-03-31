@@ -27,4 +27,4 @@
     - title: JukeBot Green
       id: 1097230621165764648
       slots: 90
-      max_slots: 100
+      max_slots: 1000
