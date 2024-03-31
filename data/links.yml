@@ -16,15 +16,15 @@
 
 - group: JukeBot Instances
   items:
-    - title: JukeBot Red
-      id: 899039383011885176
-      slots: 100
-      max_slots: 100
-    - title: JukeBot Yellow
-      id: 967377726942105621
-      slots: 100
-      max_slots: 100
-    - title: JukeBot Green
+    - title: JukeBot
       id: 1097230621165764648
       slots: 90
       max_slots: 1000
+    - title: JukeBot Red (legacy instance)
+      id: 899039383011885176
+      slots: 100
+      max_slots: 100
+    - title: JukeBot Yellow (legacy instance)
+      id: 967377726942105621
+      slots: 100
+      max_slots: 100
