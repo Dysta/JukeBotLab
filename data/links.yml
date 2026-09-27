@@ -18,5 +18,5 @@
   items:
     - title: JukeBot
       id: 1097230621165764648
-      slots: 800
+      slots: 720
       max_slots: 1000
