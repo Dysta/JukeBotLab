@@ -7,7 +7,7 @@
 
 - title: find
   icon: fas fa-assistive-listening-systems
-  usage: /find url
+  usage: /find <url>
   desc: Parses the media at the given URL and returns the music used in it
 
 - title: grab
@@ -37,7 +37,7 @@
 
 - title: loop
   icon: fas fa-redo
-  usage: /loop mode
+  usage: /loop <mode>
   desc: Allow user to enable or disable the looping of a song or queue.
 
 - title: pause
@@ -47,17 +47,17 @@
 
 - title: play
   icon: fas fa-music
-  usage: /play query top
+  usage: /play <query> [top]
   desc: Play music from URL or search
 
 - title: queue
   icon: fas fa-list
-  usage: /queue show add remove clear shuffle
+  usage: /queue <show | add | clear | shuffle | remove>
   desc: Base command to perform manipulations on the bot queue
 
 - title: radio
   icon: fas fa-broadcast-tower
-  usage: /radio lofi jazz rocknroll chiptune synthwave lounge minecraft rap poprock workout slowed
+  usage: /radio <lofi | jazz | rocknroll | chiptune | synthwave | lounge | minecraft | rap | poprock | workout | slowed>
   desc: Launch a random radio
 
 - title: reset
@@ -72,12 +72,12 @@
 
 - title: search
   icon: fas fa-search
-  usage: /search query source
+  usage: /search <query> [source]
   desc: Allows you to search the first 10 results for the desired music.
 
 - title: share
   icon: fas fa-share-alt
-  usage: /share url
+  usage: /share <url>
   desc: Returns all streaming platforms available for the given media
 
 - title: skip
