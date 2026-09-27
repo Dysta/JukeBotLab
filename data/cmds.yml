@@ -89,8 +89,3 @@
   icon: fas fa-stop-circle
   usage: /stop 
   desc: Stop and skip current music without disconnecting bot from voice channel
-
-- title: watch
-  icon: fab fa-youtube
-  usage: /watch 
-  desc: Launch a Youtube Together session in the voice channel where you are currently.
